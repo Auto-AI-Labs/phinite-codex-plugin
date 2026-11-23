@@ -1,0 +1,20 @@
+{
+  "name": "phinite",
+  "interface": {
+    "displayName": "Phinite"
+  },
+  "plugins": [
+    {
+      "name": "phinite",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

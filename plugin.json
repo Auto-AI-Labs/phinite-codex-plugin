@@ -1,0 +1,36 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "phinite",
+  "version": "0.4.4",
+  "description": "Build, ship, run and debug Phinite agent graphs through the hosted Phinite MCP server (OAuth sign-in), with the playbook's design rules as skills and a local project script.",
+  "author": {
+    "name": "Phinite CIQ use-case team"
+  },
+  "repository": "https://github.com/Auto-AI-Labs/phinite-claudecode-plugin",
+  "keywords": [
+    "phinite",
+    "agents",
+    "agent-graphs",
+    "mcp"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Phinite",
+        "shortDescription": "Build, ship and debug Phinite agent graphs",
+        "longDescription": "Design Phinite agent graphs with the playbook's rules, deploy use-case folders, test and debug runs, and ship them behind triggers or the Chat API, as the signed-in Phinite user.",
+        "developerName": "Phinite CIQ use-case team",
+        "category": "Developer Tools",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://phinite.ai",
+        "defaultPrompt": [
+          "Use Phinite to build a support assistant that answers billing questions from our invoices API.",
+          "Use Phinite to test my graph and explain the last run."
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "description": "Phinite: refuse reads and commands that would print a .env file's values (names-only is fine).",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "for d in \"$PLUGIN_ROOT\" \"$CLAUDE_PLUGIN_ROOT\"; do g=\"$d/hooks/env_guard.py\"; if [ -n \"$d\" ] && [ -f \"$g\" ]; then p=$(command -v python3 || command -v python) || break; exec \"$p\" \"$g\" --client codex; fi; done; exit 0",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
